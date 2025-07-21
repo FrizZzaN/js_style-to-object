@@ -9,7 +9,7 @@ function convertToObject(sourceString) {
   return sourceString
     .split(';')
     .map((line) => line.trim())
-    .filter((line) => line)
+    .filter((line) => line.includes(':'))
     .reduce((acc, line) => {
       const [key, value] = line.split(':').map((part) => part.trim());
 
